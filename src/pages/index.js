@@ -45,11 +45,16 @@ export default function Home() {
             <button type='submit'>Search</button>
           </form>
           {searchResults.map((paper) => (
+            <a href={"/resultview?id=" + paper.paperId}>
             <div key={paper.paperId}>
               <h2>{paper.title}</h2>
               <p>{paper.abstract}</p>
             </div>
+            </a>
           ))}
+          {/*TODO: Add next and previous buttons here, conditional on the results loading*/}
+          <button/>
+          <button/>
         </div>
       </main>
     </>
